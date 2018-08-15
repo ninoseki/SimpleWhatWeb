@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://neverssl.com/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - neverssl.com
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '2536'
+      Connection:
+      - close
+      Date:
+      - Sat, 11 Aug 2018 07:53:48 GMT
+      Last-Modified:
+      - Thu, 14 Jun 2018 00:16:40 GMT
+      Etag:
+      - '"e8bb9152091d61caa9d69fed8c4aebc6"'
+      Accept-Ranges:
+      - bytes
+      Server:
+      - AmazonS3
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '69323'
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 c86940ce92ab2aa5ec9c51707e85666a.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - UHF5oJZ3rUyT0suJXKdWWm9NW91G0efHXGMqk805wnSduwJZbK0bNg==
+    body:
+      encoding: ASCII-8BIT
+      string: "<html>\n    <head>\n        <title>NeverSSL - helping you get online</title>\n\n
+        \       <style>\n        body {\n             font-family: Montserrat, helvetica,
+        arial, sans-serif; \n             font-size: 16x;\n             color: #444444;\n
+        \            margin: 0;\n        }\n        h2 {\n            font-weight:
+        700;\n            font-size: 1.6em;\n            margin-top: 30px;\n        }\n
+        \       p {\n            line-height: 1.6em;\n        }\n        .container
+        {\n            max-width: 650px;\n            margin: 20px auto 20px auto;\n
+        \           padding-left: 15px;\n            padding-right: 15px\n        }\n
+        \       .header {\n            background-color: #42C0FD;\n            color:
+        #FFFFFF;\n            padding: 10px 0 10px 0;\n            font-size: 2.2em;\n
+        \       }\n        <!-- CSS from Mark Webster https://gist.github.com/markcwebster/9bdf30655cdd5279bad13993ac87c85d
+        -->\n        </style>\n    </head>\n    <body>\n\n    <div class=\"header\">\n
+        \       <div class=\"container\">\n        <h1>NeverSSL</h1>\n        </div>\n
+        \   </div>\n    \n    <div class=\"content\">\n    <div class=\"container\">\n\n
+        \   <h2>What?</h2>\n    <p>This website is for when you try to open Facebook,
+        Google, Amazon, etc\n    on a wifi network, and nothing happens. Type \"http://neverssl.com\"\n
+        \   into your browser's url bar, and you'll be able to log on.</p>\n\n    <h2>How?</h2>\n
+        \   <p>neverssl.com will never use SSL (also known as TLS). No\n    encryption,
+        no strong authentication, no <a\n    href=\"https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security\">HSTS</a>,\n
+        \   no HTTP/2.0, just plain old unencrypted HTTP and forever stuck in the
+        dark\n    ages of internet security.</p> \n\n    <h2>Why?</h2>\n    <p>Normally,
+        that's a bad idea. You should always use SSL and secure\n    encryption when
+        possible. In fact, it's such a bad idea that most websites\n    are now using
+        https by default.</p>\n    \n    <p>And that's great, but it also means that
+        if you're relying on\n    poorly-behaved wifi networks, it can be hard to
+        get online.  Secure\n    browsers and websites using https make it impossible
+        for those wifi\n    networks to send you to a login or payment page. Basically,
+        those networks\n    can't tap into your connection just like attackers can't.
+        Modern browsers\n    are so good that they can remember when a website supports
+        encryption and\n    even if you type in the website name, they'll use https.</p>
+        \n\n    <p>And if the network never redirects you to this page, well as you
+        can\n    see, you're not missing much.</p>\n\n    </div>\n    </div>\n    \n
+        \   </body>\n</html>\n"
+    http_version: 
+  recorded_at: Wed, 15 Aug 2018 12:08:42 GMT
+recorded_with: VCR 4.0.0
