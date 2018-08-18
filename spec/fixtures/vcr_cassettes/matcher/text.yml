@@ -1,0 +1,273 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://150.60.46.194/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 150.60.46.194
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 14 Aug 2018 12:03:27 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.5.9
+      X-Pingback:
+      - http://koo.sc/wp/xmlrpc.php
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\r\n<html lang=\"ja\"\n\titemscope \n\titemtype=\"http://schema.org/WebSite\"
+        \n\tprefix=\"og: http://ogp.me/ns#\" >\r\n<head>\r\n<title>赤坂中華料理ダイニング【Koo】シーフード＆ワイン</title>\r\n<meta
+        charset=\"utf-8\">\r\n<meta name=\"viewport\" content=\"width=device-width,
+        initial-scale=1.0\">\r\n<link rel=\"stylesheet\" href=\"http://koo.sc/wp/wp-content/themes/mdm/responsive.css\"
+        type=\"text/css\" media=\"screen, print\" />\r\n<link rel=\"stylesheet\" href=\"http://koo.sc/wp/wp-content/themes/mdm/style.css\"
+        type=\"text/css\" media=\"screen, print\" />\r\n<link rel=\"alternate\" type=\"application/atom+xml\"
+        title=\" Atom Feed\" href=\"http://koo.sc/feed/atom/\" />\r\n<link rel=\"alternate\"
+        type=\"application/rss+xml\" title=\" RSS Feed\" href=\"http://koo.sc/feed/\"
+        />\r\n<!--[if lt IE 9]>\r\n<script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\r\n<![endif]-->\r\n\n<!--
+        All in One SEO Pack 2.3.9.1 by Michael Torbert of Semper Fi Web Design[127,134]
+        -->\n<meta name=\"description\" itemprop=\"description\" content=\"赤坂の中華料理ダイニングSeafood
+        Chinese＆wine Koo　シーフードチャイニーズ＆ワイン【KOOクー】手づかみのシーフードや新世代の中華料理をご堪能ください。\" />\n\n<meta
+        name=\"keywords\" itemprop=\"keywords\" content=\"中華料理,赤坂,シーフード,ダイニング,ディナー,\"
+        />\n<link rel='next' href='http://koo.sc/page/2/' />\n\n<link rel=\"canonical\"
+        href=\"http://koo.sc/\" />\n<meta property=\"og:url\" content=\"http://koo.sc/\"
+        />\n<meta property=\"og:image\" content=\"http://koo.sc/wp/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png\"
+        />\n<meta name=\"twitter:card\" content=\"summary\" />\n<meta name=\"twitter:image\"
+        content=\"http://koo.sc/wp/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png\"
+        />\n<meta itemprop=\"image\" content=\"http://koo.sc/wp/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png\"
+        />\n<!-- /all in one seo pack -->\n<link rel='stylesheet' id='contact-form-7-css'
+        \ href='http://koo.sc/wp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.3'
+        type='text/css' media='all' />\n<link rel='stylesheet' id='jquery.fancybox-css'
+        \ href='http://koo.sc/wp/wp-content/plugins/fancy-box/jquery.fancybox.css?ver=1.2.6'
+        type='text/css' media='all' />\n<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1.7.1'></script>\n<script
+        type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/fancy-box/jquery.fancybox.js?ver=1.2.6'></script>\n<script
+        type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/fancy-box/jquery.easing.js?ver=1.3'></script>\n<script
+        type=\"text/javascript\">\n  jQuery(document).ready(function($){\n    var
+        select = $('a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"],a[href$=\".BMP\"],a[href$=\".GIF\"],a[href$=\".JPG\"],a[href$=\".JPEG\"],a[href$=\".PNG\"]');\n
+        \   select.attr('rel', 'fancybox');\n    select.fancybox();\n  });\n</script>\n<style>.simplemap
+        img{max-width:none !important;padding:0 !important;margin:0 !important;}.staticmap,.staticmap
+        img{max-width:100% !important;height:auto !important;}.simplemap .simplemap-content{display:none;}</style>\n<style
+        type=\"text/css\" id=\"custom-background-css\">\nbody.custom-background {
+        background-color: #000000; background-image: url('http://150.60.46.194/wp/wp-content/uploads/2015/04/Texture_014.jpg');
+        background-repeat: repeat; background-position: top center; background-attachment:
+        fixed; }\n</style>\n<script type=\"text/javascript\" src=\"http://koo.sc/wp/wp-content/themes/mdm/jquery/scrolltopcontrol.js\"></script>\r\n<script
+        src=\"http://koo.sc/wp/wp-content/themes/mdm/jquery/jquery.cycle2.js\" type=\"text/javascript\"></script>\r\n<script
+        src=\"http://koo.sc/wp/wp-content/themes/mdm/jquery/jquery.cycle2.carousel.js\"
+        type=\"text/javascript\"></script>\r\n<script type=\"text/javascript\">\r\n
+        $().ready(function() {\r\n   $(document).ready(\r\n     function(){\r\n     $(\"a
+        img\").hover(function(){\r\n     $(this).fadeTo(200, 0.8);\r\n     },function(){\r\n
+        \    $(this).fadeTo(300, 1.0);\r\n     });\r\n   });\r\n });\r\n</script>\r\n<link
+        href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>\r\n</head>\r\n\r\n<body
+        class=\"home blog custom-background\">\r\n\r\n<!-- トップナビゲーション -->\r\n<nav
+        id=\"nav\" class=\"main-navigation\" role=\"navigation\">\r\n<div class=\"menu-topnav-container\"><ul
+        id=\"menu-topnav\" class=\"nav-menu\"><li id=\"menu-item-62\" class=\"menu-item
+        menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home
+        menu-item-62\"><a href=\"http://koo.sc/\">Home</a></li>\n<li id=\"menu-item-60\"
+        class=\"menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children
+        menu-item-60\"><a href=\"http://koo.sc/category/gallery/\">Menu</a>\n<ul class=\"sub-menu\">\n\t<li
+        id=\"menu-item-271\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-271\"><a href=\"http://koo.sc/category/gallery/appetizer/\">Appetizer</a></li>\n\t<li
+        id=\"menu-item-272\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-272\"><a href=\"http://koo.sc/category/gallery/sashimi/\">Dinner</a></li>\n\t<li
+        id=\"menu-item-275\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-275\"><a href=\"http://koo.sc/category/gallery/nakanosakaue/\">Noodles・Feed</a></li>\n\t<li
+        id=\"menu-item-273\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-273\"><a href=\"http://koo.sc/category/gallery/azabu-juban/\">Lunch</a></li>\n\t<li
+        id=\"menu-item-274\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-274\"><a href=\"http://koo.sc/category/gallery/dessert/\">Dessert</a></li>\n\t<li
+        id=\"menu-item-276\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-276\"><a href=\"http://koo.sc/category/gallery/tsukishima/\">Drink</a></li>\n</ul>\n</li>\n<li
+        id=\"menu-item-63\" class=\"menu-item menu-item-type-post_type menu-item-object-page
+        menu-item-63\"><a href=\"http://koo.sc/concept/\">Concept</a></li>\n<li id=\"menu-item-64\"
+        class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-64\"><a
+        href=\"http://koo.sc/access/\">Access</a></li>\n<li id=\"menu-item-65\" class=\"menu-item
+        menu-item-type-post_type menu-item-object-page menu-item-65\"><a href=\"http://koo.sc/contact/\">Contact</a></li>\n</ul></div></nav>\r\n<!--
+        / トップナビゲーション -->\r\n<div class=\"clear\"></div>  \r\n\r\n<!-- ヘッダー -->\r\n<header
+        id=\"header\">\r\n\r\n<!-- ヘッダー中身 -->    \r\n<div class=\"header-inner\">\r\n\r\n<!--
+        ロゴ -->\r\n<h1 class=\"logo\">\r\n<a href=\"http://koo.sc\" title=\"\"><img
+        src=\"http://koo.sc/wp/wp-content/uploads/2016/09/koo_newlogo_160804_cs423.png\"
+        alt=\"\"/></a>\r\n</h1>\r\n<!-- / ロゴ -->\r\n  \r\n</div>    \r\n<!-- / ヘッダー中身
+        -->    \r\n\r\n</header>\r\n<!-- / ヘッダー -->  \r\n<div class=\"clear\"></div>\n<!--
+        スライドショー -->\n<div id=\"top-slide\">\n\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/main.jpg\"
+        \ />\n<!--\n<div class=\"cycle-slideshow\"\n data-cycle-fx=\"fade\"\n data-cycle-pause-on-hover=\"false\"\n
+        data-cycle-speed=\"300\">\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/main.jpg\"
+        alt=\"\" />\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/メイン.png\"
+        alt=\"\" />\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/main3.jpg\"
+        alt=\"\" />\n</div>\n-->\n<!-- / スライドショー -->\n</div>\n\n\n<!-- Latestブロック
+        -->\n<div id=\"latest-bloc\">\n\n<!-- コンテンツブロック -->\n<div class=\"row\">\n<article
+        class=\"latest\">\t\n<div id=\"topbox\">\n\n<div id=\"text-3\" class=\"widget
+        widget_text\"><div class=\"top-title\">Topic</div>\n\t<div class=\"textwidget\"><p>・新鮮な生肉、銘柄牛の赤身肉にこだわった麻布十番発祥のBULLSが5月17日（火）堂々月島に出店</p>\n\t</div>\n</div>\n\n<!--\n<div
+        id=\"text-3\" class=\"widget widget_text\"><div class=\"top-title\">Topic</div>\t\t\t<div
+        class=\"textwidget\"><p>・赤坂に今までなかった新しいスタイルのチャイニーズダイナー【KOO クー】OPEN！（2015年4月28日）</p>\n</div>\n\t\t</div>-->\n\n</div>\n</article>\t\n</div>\n<!--
+        / コンテンツブロック -->\n\n</div>\n<!-- / Latestブロック -->\n\n\n<!-- 全体warapper -->\n<div
+        class=\"wrapper\">\n\n\n<!-- メインwrap -->\n<!-- / メインwrap -->\n\n\n\n</div>\r\n<!--
+        / 全体wrapper -->\r\n\r\n<!-- フッターエリア -->\r\n<footer id=\"footer\">\r\n<div
+        class=\"footer-inner\">\r\n\r\n<div id=\"sociallink\">\r\n<!-- Facebookアイコン
+        -->\r\n<a href=\"https://www.facebook.com/pages/Seafood-Chinesewine-Koo/1581841522065374?ref=hl/\"
+        target=\"_blank\" title=\"Facebook\"><img src=\"http://koo.sc/wp/wp-content/uploads/2015/05/facebook.jpg\"
+        alt=\"Facebook\" style=\"margin-right:10px\" /></a>\r\n<!-- / Facebookアイコン
+        -->\r\n<a href=\"http://koo.sc/kai/\" target=\"_blank\" title=\"\r\n中華料理　赤坂　魁\"><img
+        src=\"http://koo.sc/wp/wp-content/uploads/2015/05/kai.jpg\" alt=\"\" style=\"margin-right:10px\"
+        /></a>\r\n</div>\r\n\r\n<!-- コピーライト表示 -->\r\n<div id=\"copyright\">\r\nCopyright
+        © 2015 Koo all rights reserved.\r\n</div>\r\n<!-- /コピーライト表示 -->\r\n\r\n</div>\r\n</footer>\r\n<!--
+        / フッターエリア -->\r\n\r\n<script type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>\n<script
+        type='text/javascript'>\n/* <![CDATA[ */\nvar _wpcf7 = {\"loaderUrl\":\"http:\\/\\/koo.sc\\/wp\\/wp-content\\/plugins\\/contact-form-7\\/images\\/ajax-loader.gif\",\"sending\":\"\\u9001\\u4fe1\\u4e2d
+        ...\"};\n/* ]]> */\n</script>\n<script type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.3'></script>\n\r\n\r\n</body>\r\n</html>"
+    http_version: 
+  recorded_at: Tue, 14 Aug 2018 12:03:28 GMT
+- request:
+    method: get
+    uri: http://150.60.46.194/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - 150.60.46.194
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Aug 2018 10:50:04 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.5.9
+      X-Pingback:
+      - http://koo.sc/wp/xmlrpc.php
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\r\n<html lang=\"ja\"\n\titemscope \n\titemtype=\"http://schema.org/WebSite\"
+        \n\tprefix=\"og: http://ogp.me/ns#\" >\r\n<head>\r\n<title>赤坂中華料理ダイニング【Koo】シーフード＆ワイン</title>\r\n<meta
+        charset=\"utf-8\">\r\n<meta name=\"viewport\" content=\"width=device-width,
+        initial-scale=1.0\">\r\n<link rel=\"stylesheet\" href=\"http://koo.sc/wp/wp-content/themes/mdm/responsive.css\"
+        type=\"text/css\" media=\"screen, print\" />\r\n<link rel=\"stylesheet\" href=\"http://koo.sc/wp/wp-content/themes/mdm/style.css\"
+        type=\"text/css\" media=\"screen, print\" />\r\n<link rel=\"alternate\" type=\"application/atom+xml\"
+        title=\" Atom Feed\" href=\"http://koo.sc/feed/atom/\" />\r\n<link rel=\"alternate\"
+        type=\"application/rss+xml\" title=\" RSS Feed\" href=\"http://koo.sc/feed/\"
+        />\r\n<!--[if lt IE 9]>\r\n<script src=\"http://html5shiv.googlecode.com/svn/trunk/html5.js\"></script>\r\n<![endif]-->\r\n\n<!--
+        All in One SEO Pack 2.3.9.1 by Michael Torbert of Semper Fi Web Design[127,134]
+        -->\n<meta name=\"description\" itemprop=\"description\" content=\"赤坂の中華料理ダイニングSeafood
+        Chinese＆wine Koo　シーフードチャイニーズ＆ワイン【KOOクー】手づかみのシーフードや新世代の中華料理をご堪能ください。\" />\n\n<meta
+        name=\"keywords\" itemprop=\"keywords\" content=\"中華料理,赤坂,シーフード,ダイニング,ディナー,\"
+        />\n<link rel='next' href='http://koo.sc/page/2/' />\n\n<link rel=\"canonical\"
+        href=\"http://koo.sc/\" />\n<meta property=\"og:url\" content=\"http://koo.sc/\"
+        />\n<meta property=\"og:image\" content=\"http://koo.sc/wp/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png\"
+        />\n<meta name=\"twitter:card\" content=\"summary\" />\n<meta name=\"twitter:image\"
+        content=\"http://koo.sc/wp/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png\"
+        />\n<meta itemprop=\"image\" content=\"http://koo.sc/wp/wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png\"
+        />\n<!-- /all in one seo pack -->\n<link rel='stylesheet' id='contact-form-7-css'
+        \ href='http://koo.sc/wp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.0.3'
+        type='text/css' media='all' />\n<link rel='stylesheet' id='jquery.fancybox-css'
+        \ href='http://koo.sc/wp/wp-content/plugins/fancy-box/jquery.fancybox.css?ver=1.2.6'
+        type='text/css' media='all' />\n<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js?ver=1.7.1'></script>\n<script
+        type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/fancy-box/jquery.fancybox.js?ver=1.2.6'></script>\n<script
+        type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/fancy-box/jquery.easing.js?ver=1.3'></script>\n<script
+        type=\"text/javascript\">\n  jQuery(document).ready(function($){\n    var
+        select = $('a[href$=\".bmp\"],a[href$=\".gif\"],a[href$=\".jpg\"],a[href$=\".jpeg\"],a[href$=\".png\"],a[href$=\".BMP\"],a[href$=\".GIF\"],a[href$=\".JPG\"],a[href$=\".JPEG\"],a[href$=\".PNG\"]');\n
+        \   select.attr('rel', 'fancybox');\n    select.fancybox();\n  });\n</script>\n<style>.simplemap
+        img{max-width:none !important;padding:0 !important;margin:0 !important;}.staticmap,.staticmap
+        img{max-width:100% !important;height:auto !important;}.simplemap .simplemap-content{display:none;}</style>\n<style
+        type=\"text/css\" id=\"custom-background-css\">\nbody.custom-background {
+        background-color: #000000; background-image: url('http://150.60.46.194/wp/wp-content/uploads/2015/04/Texture_014.jpg');
+        background-repeat: repeat; background-position: top center; background-attachment:
+        fixed; }\n</style>\n<script type=\"text/javascript\" src=\"http://koo.sc/wp/wp-content/themes/mdm/jquery/scrolltopcontrol.js\"></script>\r\n<script
+        src=\"http://koo.sc/wp/wp-content/themes/mdm/jquery/jquery.cycle2.js\" type=\"text/javascript\"></script>\r\n<script
+        src=\"http://koo.sc/wp/wp-content/themes/mdm/jquery/jquery.cycle2.carousel.js\"
+        type=\"text/javascript\"></script>\r\n<script type=\"text/javascript\">\r\n
+        $().ready(function() {\r\n   $(document).ready(\r\n     function(){\r\n     $(\"a
+        img\").hover(function(){\r\n     $(this).fadeTo(200, 0.8);\r\n     },function(){\r\n
+        \    $(this).fadeTo(300, 1.0);\r\n     });\r\n   });\r\n });\r\n</script>\r\n<link
+        href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>\r\n</head>\r\n\r\n<body
+        class=\"home blog custom-background\">\r\n\r\n<!-- トップナビゲーション -->\r\n<nav
+        id=\"nav\" class=\"main-navigation\" role=\"navigation\">\r\n<div class=\"menu-topnav-container\"><ul
+        id=\"menu-topnav\" class=\"nav-menu\"><li id=\"menu-item-62\" class=\"menu-item
+        menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home
+        menu-item-62\"><a href=\"http://koo.sc/\">Home</a></li>\n<li id=\"menu-item-60\"
+        class=\"menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children
+        menu-item-60\"><a href=\"http://koo.sc/category/gallery/\">Menu</a>\n<ul class=\"sub-menu\">\n\t<li
+        id=\"menu-item-271\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-271\"><a href=\"http://koo.sc/category/gallery/appetizer/\">Appetizer</a></li>\n\t<li
+        id=\"menu-item-272\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-272\"><a href=\"http://koo.sc/category/gallery/sashimi/\">Dinner</a></li>\n\t<li
+        id=\"menu-item-275\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-275\"><a href=\"http://koo.sc/category/gallery/nakanosakaue/\">Noodles・Feed</a></li>\n\t<li
+        id=\"menu-item-273\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-273\"><a href=\"http://koo.sc/category/gallery/azabu-juban/\">Lunch</a></li>\n\t<li
+        id=\"menu-item-274\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-274\"><a href=\"http://koo.sc/category/gallery/dessert/\">Dessert</a></li>\n\t<li
+        id=\"menu-item-276\" class=\"menu-item menu-item-type-taxonomy menu-item-object-category
+        menu-item-276\"><a href=\"http://koo.sc/category/gallery/tsukishima/\">Drink</a></li>\n</ul>\n</li>\n<li
+        id=\"menu-item-63\" class=\"menu-item menu-item-type-post_type menu-item-object-page
+        menu-item-63\"><a href=\"http://koo.sc/concept/\">Concept</a></li>\n<li id=\"menu-item-64\"
+        class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-64\"><a
+        href=\"http://koo.sc/access/\">Access</a></li>\n<li id=\"menu-item-65\" class=\"menu-item
+        menu-item-type-post_type menu-item-object-page menu-item-65\"><a href=\"http://koo.sc/contact/\">Contact</a></li>\n</ul></div></nav>\r\n<!--
+        / トップナビゲーション -->\r\n<div class=\"clear\"></div>  \r\n\r\n<!-- ヘッダー -->\r\n<header
+        id=\"header\">\r\n\r\n<!-- ヘッダー中身 -->    \r\n<div class=\"header-inner\">\r\n\r\n<!--
+        ロゴ -->\r\n<h1 class=\"logo\">\r\n<a href=\"http://koo.sc\" title=\"\"><img
+        src=\"http://koo.sc/wp/wp-content/uploads/2016/09/koo_newlogo_160804_cs423.png\"
+        alt=\"\"/></a>\r\n</h1>\r\n<!-- / ロゴ -->\r\n  \r\n</div>    \r\n<!-- / ヘッダー中身
+        -->    \r\n\r\n</header>\r\n<!-- / ヘッダー -->  \r\n<div class=\"clear\"></div>\n<!--
+        スライドショー -->\n<div id=\"top-slide\">\n\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/main.jpg\"
+        \ />\n<!--\n<div class=\"cycle-slideshow\"\n data-cycle-fx=\"fade\"\n data-cycle-pause-on-hover=\"false\"\n
+        data-cycle-speed=\"300\">\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/main.jpg\"
+        alt=\"\" />\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/メイン.png\"
+        alt=\"\" />\n<img src=\"http://150.60.46.194/wp/wp-content/uploads/2015/04/main3.jpg\"
+        alt=\"\" />\n</div>\n-->\n<!-- / スライドショー -->\n</div>\n\n\n<!-- Latestブロック
+        -->\n<div id=\"latest-bloc\">\n\n<!-- コンテンツブロック -->\n<div class=\"row\">\n<article
+        class=\"latest\">\t\n<div id=\"topbox\">\n\n<div id=\"text-3\" class=\"widget
+        widget_text\"><div class=\"top-title\">Topic</div>\n\t<div class=\"textwidget\"><p>・新鮮な生肉、銘柄牛の赤身肉にこだわった麻布十番発祥のBULLSが5月17日（火）堂々月島に出店</p>\n\t</div>\n</div>\n\n<!--\n<div
+        id=\"text-3\" class=\"widget widget_text\"><div class=\"top-title\">Topic</div>\t\t\t<div
+        class=\"textwidget\"><p>・赤坂に今までなかった新しいスタイルのチャイニーズダイナー【KOO クー】OPEN！（2015年4月28日）</p>\n</div>\n\t\t</div>-->\n\n</div>\n</article>\t\n</div>\n<!--
+        / コンテンツブロック -->\n\n</div>\n<!-- / Latestブロック -->\n\n\n<!-- 全体warapper -->\n<div
+        class=\"wrapper\">\n\n\n<!-- メインwrap -->\n<!-- / メインwrap -->\n\n\n\n</div>\r\n<!--
+        / 全体wrapper -->\r\n\r\n<!-- フッターエリア -->\r\n<footer id=\"footer\">\r\n<div
+        class=\"footer-inner\">\r\n\r\n<div id=\"sociallink\">\r\n<!-- Facebookアイコン
+        -->\r\n<a href=\"https://www.facebook.com/pages/Seafood-Chinesewine-Koo/1581841522065374?ref=hl/\"
+        target=\"_blank\" title=\"Facebook\"><img src=\"http://koo.sc/wp/wp-content/uploads/2015/05/facebook.jpg\"
+        alt=\"Facebook\" style=\"margin-right:10px\" /></a>\r\n<!-- / Facebookアイコン
+        -->\r\n<a href=\"http://koo.sc/kai/\" target=\"_blank\" title=\"\r\n中華料理　赤坂　魁\"><img
+        src=\"http://koo.sc/wp/wp-content/uploads/2015/05/kai.jpg\" alt=\"\" style=\"margin-right:10px\"
+        /></a>\r\n</div>\r\n\r\n<!-- コピーライト表示 -->\r\n<div id=\"copyright\">\r\nCopyright
+        © 2015 Koo all rights reserved.\r\n</div>\r\n<!-- /コピーライト表示 -->\r\n\r\n</div>\r\n</footer>\r\n<!--
+        / フッターエリア -->\r\n\r\n<script type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>\n<script
+        type='text/javascript'>\n/* <![CDATA[ */\nvar _wpcf7 = {\"loaderUrl\":\"http:\\/\\/koo.sc\\/wp\\/wp-content\\/plugins\\/contact-form-7\\/images\\/ajax-loader.gif\",\"sending\":\"\\u9001\\u4fe1\\u4e2d
+        ...\"};\n/* ]]> */\n</script>\n<script type='text/javascript' src='http://koo.sc/wp/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.0.3'></script>\n\r\n\r\n</body>\r\n</html>"
+    http_version: 
+  recorded_at: Wed, 15 Aug 2018 10:50:05 GMT
+recorded_with: VCR 4.0.0
