@@ -123,5 +123,13 @@ module WhatWeb
       load_rel "./plugins/*.rb"
       registered_plugins
     end
+
+    def self.load_plugins
+      instance.load_plugins
+    end
+
+    def self.registered_plugins
+      instance.registered_plugins
+    end
   end
 end

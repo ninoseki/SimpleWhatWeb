@@ -28,6 +28,88 @@ Or install it yourself as:
 
 ## Usage
 
+### As a CLI
+
+```
+Usage:
+  whatweb scan URL
+
+Options:
+  [--aggressive], [--no-aggressive]
+  [--default], [--no-default]
+
+Scan against a given URL
+```
+
+**Example**
+
+```bash
+whatweb scan http://localhost:8000 | jq .
+```
+
+```json
+{
+  "HTTPServer": [
+    {
+      "name": "server string",
+      "string": "WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+      "certainty": 100
+    }
+  ],
+  "Ruby": [
+    {
+      "regexp": [
+        "Ruby"
+      ],
+      "search": "headers[server]",
+      "certainty": 100
+    },
+    {
+      "regexp": [
+        "WEBrick"
+      ],
+      "search": "headers[server]",
+      "certainty": 100
+    }
+  ],
+  "Title": [
+    {
+      "name": "page title",
+      "string": "Index of /",
+      "certainty": 100
+    }
+  ]
+}
+```
+
+### As a library
+
+```ruby
+require "whatweb"
+require "pp"
+
+# create a scan target
+target = WhatWeb::Target.new("http://localhost:8000")
+# loads plugins
+plugins = WhatWeb::PluginManager.load_plugins
+
+results = {}
+plugins.each do |name, plugin|
+  # execute a plugin against the target
+  result = plugin.execute(target)
+  results[name] = result unless result.empty?
+end
+
+pp results
+# {"HTTPServer"=>
+#   [{:name=>"server string",
+#     :string=>"WEBrick/1.4.2 (Ruby/2.5.1/2018-03-29)",
+#     :certainty=>100}],
+#  "Ruby"=>
+#   [{:regexp=>["Ruby"], :search=>"headers[server]", :certainty=>100},
+#    {:regexp=>["WEBrick"], :search=>"headers[server]", :certainty=>100}],
+#  "Title"=>[{:name=>"page title", :string=>"Index of /", :certainty=>100}]}
+```
 
 ## Development
 
