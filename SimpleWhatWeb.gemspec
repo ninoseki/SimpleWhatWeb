@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "whatweb/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "SimpleWhatWeb"
+  spec.name          = "simple_whatweb"
   spec.version       = WhatWeb::VERSION
   spec.authors       = ["Manabu Niseki"]
   spec.email         = ["manabu.niseki@gmail.com"]

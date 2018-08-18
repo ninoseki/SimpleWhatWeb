@@ -15,7 +15,7 @@ So I created this.
 ## Installation
 
 ```ruby
-gem 'SimpleWhatWeb'
+gem 'simple_whatweb'
 ```
 
 And then execute:
@@ -24,7 +24,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install SimpleWhatWeb
+    $ gem install simple_whatweb
 
 ## Usage
 
