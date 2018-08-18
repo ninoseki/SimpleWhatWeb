@@ -1,5 +1,9 @@
 # SimpleWhatWeb
 
+[![Build Status](https://travis-ci.org/ninoseki/SimpleWhatWeb.svg?branch=master)](https://travis-ci.org/ninoseki/SimpleWhatWeb)
+[![Maintainability](https://api.codeclimate.com/v1/badges/26ff02f43736a31695d1/maintainability)](https://codeclimate.com/github/ninoseki/SimpleWhatWeb/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/ninoseki/SimpleWhatWeb/badge.svg?branch=master)](https://coveralls.io/github/ninoseki/SimpleWhatWeb?branch=master)
+
 It's a simplified & gemified version of [WhatWeb](https://github.com/urbanadventurer/WhatWeb).
 
 ## Motivations
