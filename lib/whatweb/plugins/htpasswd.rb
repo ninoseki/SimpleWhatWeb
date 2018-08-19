@@ -73,16 +73,13 @@ WhatWeb::Plugin.define "htpasswd" do
                # Display hash if unknown
                else
                  { account: line.to_s }
-                    end
-
+               end
              # Display hash if user is not "admin"
              else
                { account: line.to_s }
              end
       end
-
     end
-
     m
   end
 end

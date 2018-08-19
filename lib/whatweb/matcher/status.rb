@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module WhatWeb
   module Matcher
     class Status < Base

@@ -31,11 +31,6 @@ module WhatWeb
         end
       end
 
-      def match?(filename, md5)
-        idx = files['filenames'].index(filename)
-        @files['md5'][idx] == md5
-      end
-
       def best_match
         versions.max { |x, y| x[1].length <=> y[1].length }
       end

@@ -92,8 +92,8 @@ WhatWeb::Plugin.define "Google-Hack-Honeypot" do
     # Password format: WebAdmin:ae[11-random-characters]
     # Refresh URL and see if the password changed
     if target.uri.to_s =~ /\/passwd\.txt$/ && target.body =~ /^WebAdmin:ae[\w]{11}$/
-      status, url, ip, body, headers = open_target(target.uri.to_s)
-      if body != target.body
+      new_target = WhatWeb::Target.new(target.uri.to_s)
+      if new_target.body != target.body
         m << { module: "wwwboard passwd.txt" }
       end
 

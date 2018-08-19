@@ -35,8 +35,7 @@ WhatWeb::Plugin.define "AMX-Mod-X" do
     if target.body =~ /amx_sql_host[\s]+"([^\"]*)"/ && target.body =~ /amx_sql_user[\s]+"([^\"]+)"/ && target.body =~ /amx_sql_pass[\s]+"([^\"]*)"/
       version = target.body.scan(/amx_sql_user[\s]+"([^\"]+)"/)[0][0] + ":" + target.body.scan(/amx_sql_pass[\s]+"([^\"]*)"/)[0][0] + "@" + target.body.scan(/amx_sql_host[\s]+"([^\"]+)"/)[0][0]
       m << { version: version }
-          end
-
+    end
     m
   end
 end

@@ -4,7 +4,7 @@ vcr_options = { cassette_name: "matcher/version", record: :new_episodes }
 
 RSpec.describe WhatWeb::Matcher::Version, vcr: vcr_options do
   let(:versions) {
-    versions = {
+    {
       "5.0.0" => [
         ["login.php", "59a69886a8c006d607369865f1b4a28c"],
         ["cors/cors.php", "855be7cf5a022c5b8b77e20a7ec42db9"]

@@ -8,7 +8,7 @@ module WhatWeb
     attr_reader :url, :body, :headers, :raw_headers, :raw_response, :status, :uri
 
     def initialize(url, response = nil)
-      @url = url
+      @url = url.to_s
       @response = response || open_url
       build
     end

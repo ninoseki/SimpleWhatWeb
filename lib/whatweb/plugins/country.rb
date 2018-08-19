@@ -43,7 +43,7 @@ WhatWeb::Plugin.define "Country" do
         File.open(whatweb_folder + "/country-ips.dat", "wb") do |wfile|
           IO.foreach(whatweb_folder + "/IpToCountry.csv") do |line|
             next if line !~ /^"/
-            s, e, d1, d2, co = line.delete!("\"").split(",")
+            s, e, _d1, _d2, co = line.delete!("\"").split(",")
             s, e = s.to_i, e.to_i
             if !last_start
               # initialize with first entry

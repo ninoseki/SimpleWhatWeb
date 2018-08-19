@@ -66,7 +66,6 @@ WhatWeb::Plugin.define "Contao" do
     to_download = files.map { |x| x[:path] }.sort.uniq
     downloads = {}
     to_download.each do |d|
-
       url = URI.join(target.uri.to_s, d).to_s
       new_target = WhatWeb::Target.new(url)
       downloads[d] = { md5sum: new_target.md5sum }

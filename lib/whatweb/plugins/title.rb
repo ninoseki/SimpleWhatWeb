@@ -26,12 +26,10 @@ WhatWeb::Plugin.define "Title" do
     title = html.css("title")
     if title
       # Give warining if title element contains newline(s)
-      if title.text.include? "\n"
-        m << { name: "WARNING", module: "Title element contains newline(s)!" }
-      end
+      m << { name: "WARNING", module: "Title element contains newline(s)!" } if title.text.include? "\n"
       # Strip all newlines in title string (for better output)
       m << { name: "page title", string: title.text.strip }
-     end
+    end
     m
   end
 end

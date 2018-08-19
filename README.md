@@ -48,7 +48,7 @@ Scan against a given URL
 **Example**
 
 ```bash
-whatweb scan http://localhost:8000 | jq .
+$ whatweb scan http://localhost:8000 | jq .
 ```
 
 ```json

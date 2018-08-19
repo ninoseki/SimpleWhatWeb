@@ -35,9 +35,8 @@ WhatWeb::Plugin.define "AChecker" do
       if /	<\/td><td><span> Version: ([\d\.]+)<\/span><\/td>/.match?(target.body)
         version = target.body.scan(/	<\/td><td><span> Version: ([\d\.]+)<\/span><\/td>/)[0][0]
         m << { version: version }
-             end
+      end
     end
-
     m
   end
 end
