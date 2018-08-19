@@ -22,6 +22,7 @@ RSpec.describe WhatWeb::PluginManager, vcr: vcr_options do
     end
     describe "#aggressive" do
       it "should not raise any error" do
+        allow_any_instance_of(WhatWeb::Plugin).to receive(:randstr).and_return("fqeewoohxevinxslnplhjbymmeplmkwl")
         subject.registered_plugins.each do |_, plugin|
           expect {
             plugin.aggressive target

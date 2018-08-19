@@ -41,14 +41,13 @@ WhatWeb::Plugin.define "MySource-Matrix" do
         version = target.body.scan(/MySource Matrix ([\d\.]+)/)[0][0]
         m << { version: version }
       end
-          end
+    end
 
     # HTML comment
     if /	Running Squiz MySource v([\d\.]+) \(Matrix\) - http:\/\/matrix.squiz.net\//.match?(target.body)
       version = target.body.scan(/	Running Squiz MySource v([\d\.]+) \(Matrix\) - http:\/\/matrix.squiz.net\//)[0][0]
       m << { version: version }
     end
-
     m
   end
 end

@@ -18,12 +18,11 @@ WhatWeb::Plugin.define "Vulnerable-To-XSS" do
     m = []
     result = ""
     if /<script>([\s]*)(alert\([a-zA-Z0-9\/\'\"]+\))([\s]*[\;]?[\s]*)<\/script>/i.match?(target.body)
-      version = target.body.scan(/<script>([\s]*)(alert\([a-zA-Z0-9\/\'\"]+\))[\s]*[\;]?[\s]*<\/script>/i) { |match|
+      target.body.scan(/<script>([\s]*)(alert\([a-zA-Z0-9\/\'\"]+\))[\s]*[\;]?[\s]*<\/script>/i) { |match|
         result << "#{match} "
       }
       m << { version: result, certainty: 25 }
     end
-
     m
   end
 end

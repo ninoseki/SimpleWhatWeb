@@ -10,4 +10,3 @@ require_relative "matcher/tag_pattern"
 require_relative "matcher/text"
 require_relative "matcher/url"
 require_relative "matcher/version"
-

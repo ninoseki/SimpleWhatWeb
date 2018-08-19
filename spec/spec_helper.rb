@@ -2,7 +2,9 @@
 
 require "bundler/setup"
 require "whatweb"
+
 require "vcr"
+require "webmock"
 
 require 'coveralls'
 Coveralls.wear!

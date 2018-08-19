@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module WhatWeb
   module Matcher
     class URL < Base
@@ -21,7 +23,7 @@ module WhatWeb
         elsif is_relative? && has_query?
           "#{target.uri.path}?#{target.uri.query}".match? /#{url}$/
         elsif !is_relative? && has_query?
-          "#{target.uri.path}?#{target.uri.query}" == url
+          url == "#{target.uri.path}?#{target.uri.query}"
         else
           # !is_relative? && !has_query?
           target.uri.path == url

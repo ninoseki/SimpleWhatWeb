@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require "json"
 vcr_options = { cassette_name: "cli", record: :new_episodes }
 RSpec.describe WhatWeb::CLI, vcr: vcr_options do

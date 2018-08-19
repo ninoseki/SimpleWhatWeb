@@ -27,12 +27,11 @@ WhatWeb::Plugin.define "phpwcms" do
     m = []
 
     if /phpwcms \| open source web content management system/.match?(target.body)
-      if /          Release: ([\d\.\-A-Z]+) [\d\-]+\/\/-->/.match?(target.body)
-        version = target.body.scan(/          Release: ([\d\.\-A-Z]+) [\d\-]+\/\/-->/)[0][0]
+      if /Release: ([\d\.\-A-Z]+) [\d\-]+\/\/-->/.match?(target.body)
+        version = target.body.scan(/Release: ([\d\.\-A-Z]+) [\d\-]+\/\/-->/)[0][0]
         m << { version: version }
-            end
+      end
     end
-
     m
   end
 end

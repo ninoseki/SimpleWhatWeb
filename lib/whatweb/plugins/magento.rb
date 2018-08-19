@@ -13,7 +13,7 @@ WhatWeb::Plugin.define "Magento" do
   @website = "http://www.magentocommerce.com"
 
   @dorks = [
-    "Magento is a trademark of Magento Inc. Copyright" "admin",
+    'Magento is a trademark of Magento Inc. Copyright" "admin"',
     'intitle:"Magento Downloader" "Report All Bugs"'
   ]
 

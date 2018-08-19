@@ -39,40 +39,30 @@ WhatWeb::Plugin.define "Apache-Tomcat" do
 
   ]
 
-  def random_string(length = 32)
-    # should probably be moved somewhere else to be used in other plugins
-    (1..length).map{ |_i| ('a'..'z').to_a[rand(26)] }.join
-  end
-
   ##
   # get a random page to check for default 404 tomcat page
   ##
   def version_from_404(target)
-    new_url = "http://#{target.uri.host}:#{target.uri.port}/#{random_string}"
+    new_url = "#{target.uri.scheme}://#{target.uri.host}:#{target.uri.port}/#{randstr}"
     info = []
-    begin
-      new_target = WhatWeb::Target.new(new_url)
-
-      if new_target.status == 404
-        v = new_target.body.scan(/Apache Tomcat\/([456]\.\d+\.\d+)/)[0]
-        unless v.nil?
-          info << { name: "Tomcat version", certainty: 100, version: v }
-        end
+    new_target = WhatWeb::Target.new(new_url)
+    if new_target.status == 404
+      v = new_target.body.scan(/Apache Tomcat\/([456]\.\d+\.\d+)/)[0]
+      unless v.nil?
+        info << { name: "Tomcat version", certainty: 100, version: v }
       end
-    rescue StandardError => _
-      # do nothing
     end
     info
   end
 
   def aggressive(target)
-    info = version_from_404(target)
-
-    if info.empty?
+    begin
+      info = version_from_404(target)
+    rescue StandardError => e
+      p e
       []
-    else
-      info
-     end
+    end
+    info
     # TODO version can also be retrieve from 500 error page
   end
 end
