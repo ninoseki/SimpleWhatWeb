@@ -1,0 +1,398 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.webscantest.com/login.php
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.webscantest.com
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Aug 2018 00:22:18 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.25
+      Set-Cookie:
+      - NB_SRVID=srv301409; path=/
+      - TEST_SESSIONID=6o6gaksct344m8q3b8q5ar09l5; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '1596'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+    body:
+      encoding: ASCII-8BIT
+      string: "\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>\n\t<head>\n\t<link
+        type=\"text/css\" rel=\"stylesheet\" href=\"/css/style.css\" />\n\t\t<title>Please
+        Login</title>\n\n\t</head>\n\t<body topmargin=\"0\" leftmargin=\"0\" marginheight=\"0\"
+        marginwidth=\"0\" bgcolor=\"#000000\">\n\t\t<table cellspacing=\"0\" cellpadding=\"0\"
+        border=\"4\" align=\"center\" width=\"810\">\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"
+        style=\"height:50px\"><h1><font color=\"#FFFFFF\">Web Scanner Test Site</font></h1><td>\n\t\t\t</tr>\n\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td
+        align=\"right\" style=\"height:50px;\"><a class=\"button\" href=\"/\"><font
+        >Home</font></a></h1></td>\n\t\t\t\t\t\t</tr>\n\n\t\t\t<tr>\n\t\t\t\t<td bgcolor=\"#FFFFFF\"
+        style=\"padding:15px; vertical-align:top\">\n\t\t\t\t\t<table cellspacing=\"0\"
+        cellpadding=\"0\" border=\"4\" align=\"center\" width=\"80%\">\n<form method=\"POST\"
+        action=\"/login.php\">\t<table border=\"0\" align=\"center\">\n\t\t<tr>\n\t\t\t<td>Login:
+        <input name=\"login\" size=\"50\" /></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td>Password:
+        <input type=\"password\" name=\"passwd\" /></td>\n\t\t</tr>\n\t\t<tr>\n\t\t\t<td><input
+        type=\"submit\" name=\"submit_login\" value=\"login\" /></td>\n\t\t</tr>\n\t</table>\n</form>\n\n\n\t\t\t\t\t\t<tr
+        style=\"height:20%; vertical-align:top\">\n\t\t\t\t\t\t\t<td align=\"center\"><font
+        color=\"grey\" size=\"-2\">The form based credentials are testuser/testpass,
+        and the HTTP Basic credentials are btestuser/btestpass.</font>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<tr
+        style=\"height:10%; vertical-align:top\">\n\t\t\t\t\t\t\t<td align=\"center\"><a
+        href=\"/privacy.php\"><font color=\"#FFFFFF\">Privacy Policy</font></a></td>\n\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t</table>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>"
+    http_version: 
+  recorded_at: Sun, 19 Aug 2018 00:22:18 GMT
+- request:
+    method: get
+    uri: https://www.webscantest.com/cors/cors.php
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.webscantest.com
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Aug 2018 00:22:19 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.25
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '3562'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+      Set-Cookie:
+      - NB_SRVID=srv301409; path=/
+      Cache-Control:
+      - private
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html>\n<HTML>\n<HEAD>\n<TITLE>Test CORS</TITLE>\n\n<script
+        type=\"text/javascript\">\nfunction ajaxCors() \n{\n\t//request to the public
+        page\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET', 'cors_public.php');\t\n\t\n\txhr.onreadystatechange
+        = function () \n\t{\n  \t\tif (this.status == 200 && this.readyState == 4)
+        \n  \t\t{\t\t\t\t\n\t\t\tdocument.getElementById(\"answer_pub\").innerHTML
+        = this.responseText;\n\t\t}\n\t}\t\n\ttry\n\t{\t\n\t\txhr.send();\t\n\t}\n\tcatch(e){}\n\n\t//request
+        to the private page\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET',
+        'cors_private.php');\t\t\n\txhr.onreadystatechange = function () \n\t{\n  \t\tif
+        (this.status == 200 && this.readyState == 4) \n  \t\t{\t\t\t\t\n\t\t\tdocument.getElementById(\"answer_priv\").innerHTML
+        = this.responseText;\n\t\t}\n\t}\t\t\n\ttry\n\t{\n\t\txhr.send();\t\n\t}\n\tcatch(e){}\n\n
+        \   //request to the volatile page\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET',
+        'cors_volatile.php');\t\t\n\txhr.onreadystatechange = function () \n\t{\n
+        \ \t\tif (this.status == 200 && this.readyState == 4) \n  \t\t{\t\t\t\t\n\t\t\tdocument.getElementById(\"answer_volatile\").innerHTML
+        = this.responseText;\n\t\t}\n\t}\t\t\n\ttry\n\t{\n\t\txhr.send();\t\n\t}\n\tcatch(e){}\n\n\t//request
+        to the volatile page with asterix\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET',
+        'cors_allow_all.php');\t\t\n\txhr.onreadystatechange = function () \n\t{\n
+        \ \t\tif (this.status == 200 && this.readyState == 4) \n  \t\t{\t\t\t\t\n\t\t\tdocument.getElementById(\"answer_volatile_all\").innerHTML
+        = this.responseText;\n\t\t}\n\t}\t\t\n\ttry\n\t{\n\t\txhr.send();\t\n\t}\n\tcatch(e){}\n\n\t//request
+        to NA page\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET', 'cors_notAuthorized.php');\t\t\n\txhr.onreadystatechange
+        = function () \n\t{\n  \t\tif (this.status == 200 && this.readyState == 4)
+        \n  \t\t{\t\t\t\t\n\t\t\tdocument.getElementById(\"answer_na\").innerHTML
+        = this.responseText;\n\t\t}\n\t}\t\t\n\ttry\n\t{\n\t\txhr.send();\t\n\t}\n\tcatch(e){}\n\n\n\n
+        \       //request to NULL page\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET',
+        'cors_null.php');\t\t\n\txhr.onreadystatechange = function () \n\t{\n  \t\tif
+        (this.status == 200 && this.readyState == 4) \n  \t\t{\t\t\t\t\n\t\t\tdocument.getElementById(\"answer_null\").innerHTML
+        = this.responseText;\n\t\t}\n\t}\t\t\n\ttry\n\t{\n\t\txhr.send();\t\n\t}\n\tcatch(e){}\n\n
+        \       //request to invalid header page\n\tvar xhr = new XMLHttpRequest();\n\txhr.open('GET',
+        'cors_invalid.php');\t\t\n\txhr.onreadystatechange = function () \n\t{\n  \t\tif
+        (this.status == 200 && this.readyState == 4) \n  \t\t{\t\t\t\t\n\t\t\tdocument.getElementById(\"answer_invalid\").innerHTML
+        = this.responseText;\n\t\t}\n\t}\t\t\n\ttry\n\t{\n\t\txhr.send();\t\n\t}\n\tcatch(e){}\n}\n</script>\n\n</HEAD>\n<BODY
+        onload=\"ajaxCors()\">\n\n<h1>CORS request page </h1>\n\n<h2> Public page
+        content will be placed here </h2>\n<hr>\n<div id=\"answer_pub\" style=\"background-color:lightgreen\">\n\tNo
+        content\n</div>\n<hr>\n\n<h2> Private page content will be placed here </h2>\n<hr>\n<div
+        id=\"answer_priv\" style=\"background-color:lightblue\">\nNo content\n</div>\n<hr>\n\n<h2>
+        Volatile page content will be placed here </h2>\n<hr>\n<div id=\"answer_volatile\"
+        style=\"background-color:lightgray\">\nNo content\n</div>\n<hr>\n\n<h2> Volatile
+        page content accessible for all will be placed here </h2>\n<hr>\n<div id=\"answer_volatile_all\"
+        style=\"background-color:lightgray\">\nNo content\n</div>\n<hr>\n\n<h2> Not
+        Authorized page content will be placed here </h2>\n<hr>\n<div id=\"answer_na\"
+        style=\"background-color:lightgray\">\nNo content\n</div>\n<hr>\n\n<h2> Null
+        page content will be placed here </h2>\n<hr>\n<div id=\"answer_null\" style=\"background-color:lightgray\">\nNo
+        content\n</div>\n<hr>\n\n<h2> Invalid page content will be placed here </h2>\n<hr>\n<div
+        id=\"answer_invalid\" style=\"background-color:lightgray\">\nNo content\n</div>\n<hr>\n\n</BODY>\n</HTML>"
+    http_version: 
+  recorded_at: Sun, 19 Aug 2018 00:22:19 GMT
+- request:
+    method: get
+    uri: https://www.webscantest.com/privacy.php
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.webscantest.com
+      User-Agent:
+      - http.rb/3.3.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Aug 2018 00:22:20 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.25
+      Set-Cookie:
+      - NB_SRVID=srv301409; path=/
+      - TEST_SESSIONID=00lkv2aab2meti293ub2gm0ri3; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html
+    body:
+      encoding: ASCII-8BIT
+      string: "\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>\n\t<head>\n\t<link
+        type=\"text/css\" rel=\"stylesheet\" href=\"/css/style.css\" />\n\t\t<title>Privacy
+        Policy</title>\n\n\t</head>\n\t<body topmargin=\"0\" leftmargin=\"0\" marginheight=\"0\"
+        marginwidth=\"0\" bgcolor=\"#000000\">\n\t\t<table cellspacing=\"0\" cellpadding=\"0\"
+        border=\"4\" align=\"center\" width=\"810\">\n\t\t\t<tr>\n\t\t\t\t<td align=\"center\"
+        style=\"height:50px\"><h1><font color=\"#FFFFFF\">Web Scanner Test Site</font></h1><td>\n\t\t\t</tr>\n\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td
+        align=\"right\" style=\"height:50px;\"><a class=\"button\" href=\"/login.php\"><font
+        >Login</font></a></h1></td>\n\t\t\t\t\t\t</tr>\n\n\t\t\t<tr>\n\t\t\t\t<td
+        bgcolor=\"#FFFFFF\" style=\"padding:15px; vertical-align:top\">\n\t\t\t\t\t<table
+        cellspacing=\"0\" cellpadding=\"0\" border=\"4\" align=\"center\" width=\"80%\">\n
+        \   <h2>Privacy Policy</h2>\n    <p>At Acme we recognize that privacy is important.
+        This Privacy Policy applies to all of the products, services and websites
+        offered by Acme Inc. or its subsidiaries or affiliated companies except DoubleClick
+        (<a href=\"http://www.doubleclick.com/privacy/\">DoubleClick Privacy Policy</a>)
+        and Postini (Postini Privacy Policy); collectively, Acme's services In addition,
+        where more detailed information is needed to explain our privacy practices,
+        we post supplementary privacy notices to describe how particular services
+        process personal information. These notices can be found in the Acme Privacy
+        Center.\n    <p>Acme adheres to the US Safe Harbor Privacy Principles of Notice,
+        Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement,
+        and is registered with the <a href=\"http://www.export.gov/safeharbor/\" rel=\"nofollow\">U.S.
+        Department of Commerce's Safe Harbor Program</a>.\n    <p>If you have any
+        questions about this Privacy Policy, please feel free to contact us through
+        our website or write to us at\n    <address>Privacy Matters<br>c/o Acme Inc.<br>1234
+        Park Place<br>Monopoly, California, 90210<br>USA</address>\n\n    <h3 id=\"information\">Information
+        we collect and how we use it</h3>\n    <p>We offer a number of services that
+        do not require you to register for an account or provide any personal information
+        to us, such as Acme Search. In order to provide our full range of services,
+        we may collect the following types of information:\n    <ul>\n      <li><strong>Information
+        you provide</strong>: When you sign up for a Acme Account or other Acme service
+        or promotion that requires registration, we ask you for personal information
+        (such as your name, email address and an account password). For certain services,
+        such as our advertising programs, we also request credit card or other payment
+        account information which we maintain in encrypted form on secure servers.
+        We may combine the information you submit under your account with information
+        from other Acme services or third parties in order to provide you with a better
+        experience and to improve the quality of our services. For certain services,
+        we may give you the opportunity to opt out of combining such information.\n
+        \     <li><strong>Cookies</strong>: When you visit Acme, we send one or more
+        cookies a small file containing a string of characters to your computer or
+        other device that uniquely identifies your browser. We use cookies to improve
+        the quality of our service, including for storing user preferences, improving
+        search results and ad selection, and tracking user trends, such as how people
+        search. Acme also uses cookies in its advertising services to help advertisers
+        and publishers serve and manage ads across the web. We may set one or more
+        cookies in your browser when you visit a website, including Acme sites that
+        use our advertising cookies, and view or click on an ad supported by Acme's
+        advertising services.\n      <li><strong>Log information</strong>: When you
+        access Acme services, our servers automatically record information that your
+        browser sends whenever you visit a website. These server logs may include
+        information such as your web request, Internet Protocol address, browser type,
+        browser language, the date and time of your request and one or more cookies
+        that may uniquely identify your browser.\n      <li><strong>User communications</strong>:
+        When you send email or other communications to Acme, we may retain those communications
+        in order to process your inquiries, respond to your requests and improve our
+        services.\n      <li><strong>Affiliated Acme Services on other sites</strong>:
+        We offer some of our services on or through other web sites. Personal information
+        that you provide to those sites may be sent to Acme in order to deliver the
+        service. We process such information under this Privacy Policy. The affiliated
+        sites through which our services are offered may have different privacy practices
+        and we encourage you to read their privacy policies.\n      <li><strong>Gadgets</strong>:
+        Acme may make available third party applications through its services. The
+        information collected by Acme when you enable a gadget or other application
+        is processed under this Privacy Policy. Information collected by the application
+        or gadget provider is governed by their privacy policies.\n      <li><strong>Location
+        data</strong>: Acme offers location-enabled services, such as Acme Maps for
+        mobile. If you use those services, Acme may receive information about your
+        actual location (such as GPS signals sent by a mobile device) or information
+        that can be used to approximate a location (such as a cell ID).\n      <li><strong>Links</strong>:
+        Acme may present links in a format that enables us to keep track of whether
+        these links have been followed. We use this information to improve the quality
+        of our search technology, customized content and advertising. Read more information
+        about links and redirected URLs.\n      <li><strong>Other sites</strong>:
+        This Privacy Policy applies to Acme services only. We do not exercise control
+        over the sites displayed as search results, sites that include Acme applications,
+        products or services, or links from within our various services. These other
+        sites may place their own cookies or other files on your computer, collect
+        data or solicit personal information from you.\n    </ul>\n\n    <p>Acme only
+        processes personal information for the purposes described in this Privacy
+        Policy and/or the supplementary privacy notices for specific services. In
+        addition to the above, such purposes include:\n    <ul>\n      <li>Providing
+        our services, including the display of customized content and advertising;\n
+        \     <li>Auditing, research and analysis in order to maintain, protect and
+        improve our services;\n      <li>Ensuring the technical functioning of our
+        network;\n      <li>Protecting the rights or property of Acme or our users;
+        and\n      <li>Developing new services.\n    </ul>\n    <p>You can find more
+        information about how we process personal information by referring to the
+        supplementary privacy notices for particular services.\n    <p>Acme processes
+        personal information on our servers in the United States of America and in
+        other countries. In some cases, we process personal information on a server
+        outside your own country. We may process personal information to provide our
+        own services. In some cases, we may process personal information on behalf
+        of and according to the instructions of a third party, such as our advertising
+        partners.\n    <h3 id=\"infochoices\">Choices for personal information</h3>\n
+        \   <p>When you sign up for a particular service that requires registration,
+        we ask you to provide personal information. If we use this information in
+        a manner different than the purpose for which it was collected, then we will
+        ask for your consent prior to such use.\n    <p>If we propose to use personal
+        information for any purposes other than those described in this Privacy Policy
+        and/or in the specific service privacy notices, we will offer you an effective
+        way to opt out of the use of personal information for those other purposes.
+        We will not collect or use sensitive information for purposes other than those
+        described in this Privacy Policy and/or in the supplementary service privacy
+        notices, unless we have obtained your prior consent.\n    <p>Most browsers
+        are initially set up to accept cookies, but you can reset your browser to
+        refuse all cookies or to indicate when a cookie is being sent. However, some
+        Acme features and services may not function properly if your cookies are disabled.\n
+        \   <p>Acme uses the DoubleClick advertising cookie on AdSense partner sites
+        and certain Acme services to help advertisers and publishers serve and manage
+        ads across the web. You can view, edit, and manage your ads preferences associated
+        with this cookie by accessing the Ads Preferences Manager. In addition, you
+        may choose to opt out of the DoubleClick cookie at any time by using DoubleClick's
+        opt-out cookie.\n    <p>You can decline to submit personal information to
+        any of our services, in which case Acme may not be able to provide those services
+        to you.\n    <h3 id=\"infosharing\">Information sharing</h3>\n\n    <p>Acme
+        only shares personal information with other companies or individuals outside
+        of Acme in the following limited circumstances:\n    <ul>\n      <li>We have
+        your consent. We require opt-in consent for the sharing of any sensitive personal
+        information.\n      <li>We provide such information to our subsidiaries, affiliated
+        companies or other trusted businesses or persons for the purpose of processing
+        personal information on our behalf. We require that these parties agree to
+        process such information based on our instructions and in compliance with
+        this Privacy Policy and any other appropriate confidentiality and security
+        measures.\n      <li>We have a good faith belief that access, use, preservation
+        or disclosure of such information is reasonably necessary to (a) satisfy any
+        applicable law, regulation, legal process or enforceable governmental request,
+        (b) enforce applicable Terms of Service, including investigation of potential
+        violations thereof, (c) detect, prevent, or otherwise address fraud, security
+        or technical issues, or (d) protect against harm to the rights, property or
+        safety of Acme, its users or the public as required or permitted by law.\n
+        \   </ul>\n    <p>If Acme becomes involved in a merger, acquisition, or any
+        form of sale of some or all of its assets, we will ensure the confidentiality
+        of any personal information involved in such transactions and provide notice
+        before personal information is transferred and becomes subject to a different
+        privacy policy.\n    <p>We may share with third parties certain pieces of
+        aggregated, non-personal information, such as the number of users who searched
+        for a particular term, for example, or how many users clicked on a particular
+        advertisement. Such information does not identify you individually.\n    <p>Please
+        contact us at the address below for any additional questions about the management
+        or use of personal data.\n    <h3 id=\"infosecurity\">Information security</h3>\n
+        \   <p>We take appropriate security measures to protect against unauthorized
+        access to or unauthorized alteration, disclosure or destruction of data. These
+        include internal reviews of our data collection, storage and processing practices
+        and security measures, as well as physical security measures to guard against
+        unauthorized access to systems where we store personal data.\n    <p>We restrict
+        access to personal information to Acme employees, contractors and agents who
+        need to know that information in order to operate, develop or improve our
+        services. These individuals are bound by confidentiality obligations and may
+        be subject to discipline, including termination and criminal prosecution,
+        if they fail to meet these obligations.\n    <h3 id=\"dataintegrity\">Data
+        integrity</h3>\n\n    <p>Acme processes personal information only for the
+        purposes for which it was collected and in accordance with this Privacy Policy
+        or any applicable service-specific privacy notice. We review our data collection,
+        storage and processing practices to ensure that we only collect, store and
+        process the personal information needed to provide or improve our services
+        or as otherwise permitted under this Policy. We take reasonable steps to ensure
+        that the personal information we process is accurate, complete, and current,
+        but we depend on our users to update or correct their personal information
+        whenever necessary.\n    <h3 id=\"access\">Accessing and updating personal
+        information</h3>\n    <p>When you use Acme services, we make good faith efforts
+        to provide you with access to your personal information and either to correct
+        this data if it is inaccurate or to delete such data at your request if it
+        is not otherwise required to be retained by law or for legitimate business
+        purposes. We ask individual users to identify themselves and the information
+        requested to be accessed, corrected or removed before processing such requests,
+        and we may decline to process requests that are unreasonably repetitive or
+        systematic, require disproportionate technical effort, jeopardize the privacy
+        of others, or would be extremely impractical (for instance, requests concerning
+        information residing on backup tapes), or for which access is not otherwise
+        required. In any case where we provide information access and correction,
+        we perform this service free of charge, except if doing so would require a
+        disproportionate effort. Some of our services have different procedures to
+        access, correct or delete users' personal information. We provide the details
+        for these procedures in the specific privacy notices or FAQs for these services.\n
+        \   <h3 id=\"enforcement\">Enforcement</h3>\n    <p>Acme regularly reviews
+        its compliance with this Privacy Policy. Please feel free to direct any questions
+        or concerns regarding this Privacy Policy or Acme's treatment of personal
+        information by contacting us through this web site or by writing to us at\n
+        \   <address>Privacy Matters<br>c/o Acme Inc.<br>1234 Park Place<br>Monopoly,
+        California, 90210<br>USA</address>\n\n    <p>When we receive formal written
+        complaints at this address, it is Acme's policy to contact the complaining
+        user regarding his or her concerns. We will cooperate with the appropriate
+        regulatory authorities, including local data protection authorities, to resolve
+        any complaints regarding the transfer of personal data that cannot be resolved
+        between Acme and an individual.\n    <h3 id=\"policychanges\">Changes to this
+        Privacy Policy</h3>\n    <p>Please note that this Privacy Policy may change
+        from time to time. We will not reduce your rights under this Privacy Policy
+        without your explicit consent, and we expect most such changes will be minor.
+        Regardless, we will post any Privacy Policy changes on this page and, if the
+        changes are significant, we will provide a more prominent notice (including,
+        for certain services, email notification of Privacy Policy changes). Each
+        version of this Privacy Policy will be identified at the top of the page by
+        its effective date, and we will also keep prior versions of this Privacy Policy
+        in an archive for your review.\n    <p>If you have any additional questions
+        or concerns about this Privacy Policy, please feel free to contact us any
+        time through this web site or at\n    <address>Privacy Matters<br>c/o Acme
+        Inc.<br>1234 Park Place<br>Monopoly, California, 90210<br>USA</address>\n
+        \   <div id=\"about\">&copy;2009 Acme - About Acme - Feedback</div>\n\n\n\t\t\t\t\t\t<tr
+        style=\"height:20%; vertical-align:top\">\n\t\t\t\t\t\t\t<td align=\"center\"><font
+        color=\"grey\" size=\"-2\">The form based credentials are testuser/testpass,
+        and the HTTP Basic credentials are btestuser/btestpass.</font>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<tr
+        style=\"height:10%; vertical-align:top\">\n\t\t\t\t\t\t\t<td align=\"center\"><a
+        href=\"/privacy.php\"><font color=\"#FFFFFF\">Privacy Policy</font></a></td>\n\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t</table>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>"
+    http_version: 
+  recorded_at: Sun, 19 Aug 2018 00:22:20 GMT
+recorded_with: VCR 4.0.0

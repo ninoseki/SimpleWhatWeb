@@ -3,6 +3,7 @@
 module WhatWeb
   module Matcher
     class Version
+      attr_reader :name, :versions, :files, :url, :best_versions
       def initialize(name_product = nil, versions = nil, url = nil)
         raise ArgumentError, 'You must specify the name of the product' if name_product.nil?
         raise ArgumentError, 'You must specify the available versions of the product' if versions.nil?
@@ -10,51 +11,39 @@ module WhatWeb
 
         @name = name_product
         @versions = versions
-        @files = Hash['filenames' => [], 'files' => [], 'md5' => []]
+        @files = { 'filenames' => [], 'files' => [], 'md5' => [] }
         @url = url
-        @got_best_versions = false
         @best_versions = []
 
-        versions.each do |version|
-          version[1].each do |file|
-            next if @files['filenames'].include? file[0]
-            @files['filenames'].push(file[0])
-            @files['files'].push(URI.join(@url.to_s, file[0]).to_s)
-            target = Target.new(@files['files'].last)
-            @files['md5'].push(target.md5sum)
+        versions.each do |_version, value|
+          # e.g. key => "5.0.0"
+          # e.g. value => [["login.php", "59a69886a8c006d607369865f1b4a28c"]]]
+          value.each do |filename, _md5|
+            next if @files['filenames'].include? filename
+            @files['filenames'] << filename
+
+            url = URI.join(@url.to_s, filename.to_s)
+            @files['files'] << url
+
+            target = Target.new(url)
+            @files['md5'] << target.md5sum
           end
         end
       end
 
-      def best_matches
-        return @best_versions if @got_best_versions == true
+      def match?(filename, md5)
+        idx = files['filenames'].index(filename)
+        @files['md5'][idx] == md5
+      end
 
-        @versions.each do |version|
-          count = 0
-          version[1].each do |file|
-            i = @files['filenames'].index(file[0])
-            count += 1 if @files['md5'][i] == file[1]
-          end
-          while !@best_versions.empty? && @best_versions[0][1] < count
-            @best_versions.delete_at(0)
-          end
-          if count > 0 && (@best_versions.empty? || @best_versions[0][1] == count) && \
-             !@best_versions.include?([version[0], count])
-            @best_versions.insert(0, [version[0], count])
-          end
-        end
-
-        @got_best_versions = true
-        @best_versions.flatten!
-
-        @best_versions.each_index { |i| @best_versions.delete_at(i + 1) }.sort!
-
-        @best_versions
+      def best_match
+        versions.max { |x, y| x[1].length <=> y[1].length }
       end
 
       def matches_format
-        best_matches if @got_best_versions == false
-        @best_versions
+        return [] if versions.empty?
+        version, _files = best_match
+        [version]
       end
     end
   end
