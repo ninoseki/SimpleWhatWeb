@@ -37,4 +37,14 @@ RSpec.describe WhatWeb::CLI, vcr: vcr_options do
       end
     end
   end
+
+  describe "list_plugins" do
+    subject { WhatWeb::CLI }
+    it "should output an Array " do
+      output = capture(:stdout) { subject.start %w(list_plugins) }
+      json = JSON.parse(output)
+      expect(json).to be_an(Array)
+      expect(json.length).to eq(1750)
+    end
+  end
 end
