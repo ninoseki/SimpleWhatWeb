@@ -34,18 +34,16 @@ Or install it yourself as:
 
 ### As a CLI
 
+#### Commands
+
 ```
-Usage:
-  whatweb scan URL
-
-Options:
-  [--aggressive], [--no-aggressive]
-  [--default], [--no-default]
-
-Scan against a given URL
+Commands:
+  whatweb help [COMMAND]  # Describe available commands or one specific command
+  whatweb list_plugins    # List all plugins
+  whatweb scan URL        # Scan against a given URL
 ```
 
-**Example**
+#### Example
 
 ```bash
 $ whatweb scan http://localhost:8000 | jq .
