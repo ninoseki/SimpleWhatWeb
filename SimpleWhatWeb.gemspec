@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock", "~> 3.4"
 
   spec.add_dependency "http", "~> 3.3"
+  spec.add_dependency "oga", "~> 2.15"
   spec.add_dependency "require_all", "~> 2.0"
-  spec.add_dependency "sanitize", "~> 4.6"
   spec.add_dependency "thor", "~> 0.19"
 end

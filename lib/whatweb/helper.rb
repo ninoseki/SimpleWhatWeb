@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "digest/md5"
-require "sanitize"
+require "oga"
 
 module WhatWeb
   module Helper
@@ -10,8 +10,11 @@ module WhatWeb
         Digest::MD5.hexdigest(body.to_s)
       end
 
-      def sanitized_body
-        Sanitize.document(body.to_s, elements: ["html"])
+      def text
+        doc = Oga.parse_html(body.to_s.force_encoding('UTF-8'))
+        path = /\A<body(?:\s|>)/i.match?(body.to_s) ? '/html/body' : '/html/body/node()'
+        nodes = doc.xpath(path)
+        nodes.map(&:text).join
       end
 
       def tag_pattern

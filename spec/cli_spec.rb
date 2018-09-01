@@ -17,6 +17,7 @@ RSpec.describe WhatWeb::CLI, vcr: vcr_options do
         output = capture(:stdout) { subject.start %w(scan https://github.com) }
         json = JSON.parse(output)
         expect(json).to be_a(Hash)
+        expect(json.dig("Title").first.dig("string")).to eq("The world’s leading software development platform · GitHub")
       end
     end
   end

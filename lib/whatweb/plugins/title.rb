@@ -12,7 +12,7 @@
 # Version 0.2
 # removed :certainty=>100
 
-require "nokogiri"
+require "oga"
 
 WhatWeb::Plugin.define "Title" do
   @author = "Andrew Horton"
@@ -22,8 +22,8 @@ WhatWeb::Plugin.define "Title" do
   def passive(target)
     m = []
 
-    html = Nokogiri.parse(target.body)
-    title = html.css("title")
+    html = Oga.parse_html(target.body)
+    title = html.at_css("title")
     if title
       # Give warining if title element contains newline(s)
       m << { name: "WARNING", module: "Title element contains newline(s)!" } if title.text.include? "\n"
