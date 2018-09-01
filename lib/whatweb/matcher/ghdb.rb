@@ -45,10 +45,10 @@ module WhatWeb
           # does it start with a - ?
           if w[0] == '-'
             # reverse true/false if it begins with a -
-            !target.sanitized_body.match? /#{Regexp.escape(w[1..-1])}/i
+            !target.text.match? /#{Regexp.escape(w[1..-1])}/i
           else
             w = w[1..-1] if w[0] == '+' # if it starts with +, ignore the 1st char
-            target.sanitized_body.match? /#{Regexp.escape(w)}/i
+            target.text.match? /#{Regexp.escape(w)}/i
           end
         end
       end

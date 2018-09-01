@@ -40,8 +40,8 @@ module WhatWeb
       @tag_pattern ||= response.tag_pattern
     end
 
-    def sanitized_body
-      @sanitized_body ||= response.sanitized_body
+    def text
+      @text ||= response.text
     end
 
     def self.meta_refresh_regex
