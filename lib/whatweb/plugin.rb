@@ -93,7 +93,6 @@ module WhatWeb
       results += matches.map { |match| matching(target, match) } if matches
       results += passive(target)
       results += aggressive(target) if is_aggressive
-      # TODO: aggressive mode support
       results.flatten!
       results.compact!
       results.each { |result| result[:certainty] = 100 unless result.key?(:certainty) }

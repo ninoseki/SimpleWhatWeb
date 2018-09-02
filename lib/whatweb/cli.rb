@@ -7,10 +7,13 @@ module WhatWeb
   class CLI < Thor
     desc "scan URL", "Scan against a given URL"
     method_options aggressive: :boolean, default: false
+    method_options user_agent: :string
     def scan(url)
+      user_agent = options[:user_agent]
       is_aggressive = options[:aggressive]
+
       with_error_handling do
-        hash = execute_plugins(url, is_aggressive)
+        hash = execute_plugins(url, user_agent: user_agent, is_aggressive: is_aggressive)
         puts hash.to_json
       end
     end
@@ -23,9 +26,12 @@ module WhatWeb
     end
 
     no_commands do
-      def execute_plugins(url, is_aggressive = false)
+      def execute_plugins(url, options = {})
+        user_agent = options[:user_agent]
+        is_aggressive = options[:is_aggressive]
+
         plugins = PluginManager.instance.load_plugins
-        target = Target.new(url)
+        target = Target.new(url, user_agent: user_agent)
 
         results = {}
         plugins.each do |name, plugin|

@@ -5,16 +5,18 @@ module WhatWeb
     using WhatWeb::Helper
 
     attr_accessor :response
+    attr_reader :user_agent
     attr_reader :url, :body, :headers, :raw_headers, :raw_response, :status, :uri
 
-    def initialize(url, response = nil)
+    def initialize(url, opts = {})
       @url = url.to_s
-      @response = response || open_url
+      @user_agent = opts[:user_agent] || "WhatWeb/#{VERSION}"
+      @response = opts[:response] || open_url
       build
     end
 
     def open_url
-      HTTP.get url
+      HTTP.headers(user_agent: user_agent).get url
     end
 
     def build
