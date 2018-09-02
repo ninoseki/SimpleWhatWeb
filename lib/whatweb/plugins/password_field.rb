@@ -15,7 +15,7 @@ WhatWeb::Plugin.define "PasswordField" do
   # Matches #
   @matches = [
 
-    { name: "rss link type", regexp: /<input [^>]*?type=["']password["'][^>]*>/i },
+    { name: "input type", regexp: /<input [^>]*?type=["']password["'][^>]*>/i },
 
   ]
 
@@ -28,8 +28,8 @@ WhatWeb::Plugin.define "PasswordField" do
                field.scan(/name=["'](.*?)["']/i).first.first
              rescue StandardError
                nil
-             end # rescues when there is no name= element
-      m << { name: "field name", string: name } unless name.nil?
+             end
+      m << { name: "field name", string: name } if name
     end
     m
   end
