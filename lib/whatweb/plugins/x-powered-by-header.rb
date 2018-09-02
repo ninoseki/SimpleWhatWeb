@@ -25,9 +25,7 @@ WhatWeb::Plugin.define "X-Powered-By" do
     m = []
 
     # X-Powered-By Headers
-    unless target.headers["x-powered-by"].nil?
-      m << { name: "x-powered-by string", string: target.headers["x-powered-by"] }
-    end
+    m << { name: "x-powered-by string", string: target.headers["x-powered-by"] } if target.headers["x-powered-by"]
 
     # Return passive matches
     m

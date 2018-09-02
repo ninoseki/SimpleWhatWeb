@@ -48,9 +48,7 @@ WhatWeb::Plugin.define "Apache-Tomcat" do
     new_target = WhatWeb::Target.new(new_url)
     if new_target.status == 404
       v = new_target.body.scan(/Apache Tomcat\/([456]\.\d+\.\d+)/)[0]
-      unless v.nil?
-        info << { name: "Tomcat version", certainty: 100, version: v }
-      end
+      info << { name: "Tomcat version", certainty: 100, version: v } if v
     end
     info
   end

@@ -92,9 +92,7 @@ WhatWeb::Plugin.define "PunBB" do
     end
 
     # Set version if present
-    unless version.nil?
-      m << { name: "md5 sums of files", version: version }
-    end
+    m << { name: "md5 sums of files", version: version } if version
 
     # Return aggressive matches
     m

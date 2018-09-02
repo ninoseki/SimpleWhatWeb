@@ -93,7 +93,7 @@ WhatWeb::Plugin.define "ASP_NET" do
     m = []
 
     # Version Detection # X-AspNetmvc-version HTTP header
-    m << { string: "MVC" + target.headers['x-aspnetmvc-version'].to_s } unless target.headers['x-aspnetmvc-version'].nil?
+    m << { string: "MVC" + target.headers['x-aspnetmvc-version'].to_s } if target.headers['x-aspnetmvc-version']
 
     # Return passive results
     m
