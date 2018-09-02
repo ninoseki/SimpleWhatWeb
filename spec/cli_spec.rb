@@ -24,12 +24,14 @@ RSpec.describe WhatWeb::CLI, vcr: vcr_options do
   context "with the aggressive mode" do
     describe "#execute_plugins" do
       it "should return a Hash" do
+        allow_any_instance_of(WhatWeb::Plugin).to receive(:randstr).and_return("fqeewoohxevinxslnplhjbymmeplmkwl")
         results = subject.new.execute_plugins("https://www.webscantest.com", is_aggressive: true)
         expect(results).to be_a(Hash)
       end
     end
     describe "#scan" do
       it "should output a JSON" do
+        allow_any_instance_of(WhatWeb::Plugin).to receive(:randstr).and_return("fqeewoohxevinxslnplhjbymmeplmkwl")
         output = capture(:stdout) { subject.start %w(scan https://www.webscantest.com --aggressive) }
         json = JSON.parse(output)
         expect(json).to be_a(Hash)
