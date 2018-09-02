@@ -47,10 +47,10 @@ WhatWeb::Plugin.define "Confluence" do
     m = []
 
     # x-confluence-cluster-node
-    m << { name: "x-confluence-cluster-node header" } unless target.headers["x-confluence-cluster-node"].nil?
+    m << { name: "x-confluence-cluster-node header" } if target.headers["x-confluence-cluster-node"]
 
     # x-confluence-request-time
-    m << { name: "x-confluence-request-time header" } unless target.headers["x-confluence-request-time"].nil?
+    m << { name: "x-confluence-request-time header" } if target.headers["x-confluence-request-time"]
 
     # Return passive matches
     m

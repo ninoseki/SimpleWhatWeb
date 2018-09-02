@@ -39,7 +39,7 @@ WhatWeb::Plugin.define "AppleIDiskServer" do
       m << { name: "WWW Authenticate" } if target.headers["www-authenticate"] =~ /Basic realm="me\.com"/
 
       # Account Detection # X-dmUser
-      m << { account: target.headers["x-dmuser"] } unless target.headers["x-dmuser"].nil?
+      m << { account: target.headers["x-dmuser"] } if target.headers["x-dmuser"]
     end
 
     # Return passive matches

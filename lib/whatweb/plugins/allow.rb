@@ -19,7 +19,7 @@ WhatWeb::Plugin.define "Allow" do
     m = []
 
     # Allow HTTP Header
-    m << { module: target.headers["allow"].to_s } unless target.headers["allow"].nil?
+    m << { module: target.headers["allow"].to_s } if target.headers["allow"]
 
     m
   end

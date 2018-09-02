@@ -80,9 +80,7 @@ WhatWeb::Plugin.define "Contao" do
     end
 
     # Set version if present
-    unless version.nil?
-      m << { name: "md5 sums of files", version: version }
-    end
+    m << { name: "md5 sums of files", version: version } if version
 
     m
   end

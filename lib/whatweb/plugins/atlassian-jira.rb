@@ -50,7 +50,7 @@ WhatWeb::Plugin.define "Atlassian-JIRA" do
     m << { name: "x-arequestid header" } if target.headers["x-arequestid"] =~ /^[\d]+x[\d]+x[\d]+$/
 
     # x-ausername
-    m << { name: "x-ausername header" } unless target.headers["x-ausername"].nil?
+    m << { name: "x-ausername header" } if target.headers["x-ausername"]
 
     # atlassian.xsrf.token cookie
     m << { name: "atlassian.xsrf.token" } if target.headers["set-cookie"] =~ /atlassian\.xsrf\.token=/
