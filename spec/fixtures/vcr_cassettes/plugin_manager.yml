@@ -5699,4 +5699,112 @@ http_interactions:
         </body></html>
     http_version: 
   recorded_at: Sun, 19 Aug 2018 04:14:58 GMT
+- request:
+    method: get
+    uri: https://www.webscantest.com/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - WhatWeb/0.2.1
+      Connection:
+      - close
+      Host:
+      - www.webscantest.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 02 Sep 2018 09:12:35 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.25
+      Set-Cookie:
+      - NB_SRVID=srv301408; path=/
+      - TEST_SESSIONID=ublkmuksn06qeq3n5grbmqev22; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '5186'
+      Connection:
+      - close
+      Content-Type:
+      - text/html
+    body:
+      encoding: ASCII-8BIT
+      string: "\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\" \"http://www.w3.org/TR/REC-html40/loose.dtd\">\n<html>\n\t<head>\n\t<link
+        type=\"text/css\" rel=\"stylesheet\" href=\"/css/style.css\" />\n\t\t<title>Test
+        Site</title>\n<script language=\"javascript\"><!--\n\t\tfunction gotoselect()\n\t\t{\n\t\t\tif(document.menu_form.redirect.value!='pickone')
+        {\n\t\t\t\tvar destination = '/'+document.menu_form.redirect.value+'/';\n\t\t\t\twindow.location
+        = destination;\n\t\t\t\t}\n\t\t}\n-->\n</script>\n\n\t</head>\n\t<body topmargin=\"0\"
+        leftmargin=\"0\" marginheight=\"0\" marginwidth=\"0\" bgcolor=\"#000000\">\n\t\t<table
+        cellspacing=\"0\" cellpadding=\"0\" border=\"4\" align=\"center\" width=\"810\">\n\t\t\t<tr>\n\t\t\t\t<td
+        align=\"center\" style=\"height:50px\"><h1><font color=\"#FFFFFF\">Web Scanner
+        Test Site</font></h1><td>\n\t\t\t</tr>\n\n\t\t\t\t\t\t<tr>\n\t\t\t\t\t\t\t<td
+        align=\"right\" style=\"height:50px;\"><a class=\"button\" href=\"/login.php\"><font
+        >Login</font></a></h1></td>\n\t\t\t\t\t\t</tr>\n\n\t\t\t<tr>\n\t\t\t\t<td
+        bgcolor=\"#FFFFFF\" style=\"padding:15px; vertical-align:top\">\n\t\t\t\t\t<table
+        cellspacing=\"0\" cellpadding=\"0\" border=\"4\" align=\"center\" width=\"80%\">\n\t\tThis
+        site is setup to test automated Web Application scanners like <a style=\"display:
+        inline;\" href=\"https://www.rapid7.com/products/appspider/\">AppSpider</a><br/>\n\t\tYou
+        can view a sample report at htt<div style=\"display: none;\"></div>p:/<div
+        style=\"display: none;\"></div>/www.we<div style=\"display: none;\"></div>bscant<div
+        style=\"display: none;\"></div>est.co<div style=\"display: none;\"></div>m/repor<div
+        style=\"display: none;\"></div>t/\n<!-- NTOSklasnNjhasdk287 -->\n\t<form name=\"menu_form\">\n\t\t<fieldset>\n
+        \                   <legend>DB tests:</legend>\n\t\t\t<a href=\"jsmenu/auto_datastore.php\">DB
+        Inject Tests\n\t\t\t<a href=\"jsmenu/auto_shutterdb.php\">Blind SQL Tests</a>\n
+        \                 </fieldset>\n            \n            \t <fieldset>\n                    <legend>CSRF
+        tests:</legend>\n                        <a href=\"jsmenu/auto_crosstraining.php\">Cross
+        Site Scripting Tests</a>\n                        <a href=\"csrf\">CSRF Tests</a>\n
+        \                 </fieldset>\n                  \n                  <fieldset>\n
+        \                   <legend>CORS tests:</legend>\n                        <a
+        href=\"cors/cors.php\">CORS test page</a>\n                  </fieldset>\n\n
+        \                 <fieldset>\n                    <legend>JS tests:</legend>\n
+        \                       <a href=\"soap/demo/\">SOAP SPA page</a>\n                        <a
+        href=\"rest/demo/\">REST SPA page</a>\n                        <a href=\"react/\">ReactJS
+        test page</a>\n                         <a href=\"angular/\">Angular Versions</a>\n
+        \                 </fieldset>\n\n\t\t <fieldset>\n                    <legend>Basic
+        tests:</legend>\n\n\t\t\t<div>\n\t\t\t\t<select name=\"redirect\" onChange=\"javascript:
+        gotoselect();\">\n\t\t\t\t\t<option value=\"pickone\">Pick a category </option>\n\t\t\t\t\t<option
+        value=\"hrs\">HTTP Response Splitting Tests</option>\n\t\t\t\t\t<option value=\"payment_analysis\">Parameter
+        Analysis Tests</option>\n\t\t\t\t</select>\n\t\t\t</div>\n\t\t\t<a href=\"jsmenu/auto_osrun.php\">OS
+        Command Inject Tests</a>\n\t\t\t<a href=\"jsmenu/cookie_set_coffeepits.php\">Java
+        Grinder Tests</a>\n\t\t\t<a href=\"jsmenu/dynalink_myfiles.php\">Directory
+        Browse Tests</a>\n\t\t\t<a href=\"jsmenu/dynalink_rfplaces.php\">Resource
+        Finder Tests</a>\n\t\t\t<a href=\"jsmenu/gotoframeme.php?foo%3D0+bar%3D+url%3Dhttps%3A%2F%2Fauth.ntobjectives.com+dr%3Dsomedir\">Malicious
+        iFrame detection</a>\n\t\t\t<a href=\"jsmenu/gotoajax.php\">Web 2.0 / AJAX
+        Tests</a>\n\t\t\t<a href=\"gonowhere\">Go nowhere. Intentional dead link</a>\n\t\t\t<a
+        href=\"static/\">Lots of static Pages</a>\n\t\t\t<a href=\"xmldb/index.php\">XPath
+        Injection Tests</a>\n\t\t\t<a href=\"infodb/index.php\">Browser Cache Tests</a>\n
+        \     \n        <a href=\"business\">Business Logic Tests</a>\n      \n    </fieldset>\n\t</form>\n\t\t<font
+        color=\"grey\" size=\"-2\">There are other instances which are protected by
+        various authentication mechanisms (http:/<div style=\"display: none;\"></div>/forma<div
+        style=\"display: none;\"></div>uth.we<div style=\"display: none;\"></div>bscant<div
+        style=\"display: none;\"></div>est.co<div style=\"display: none;\"></div>m,
+        http:/<div style=\"display: none;\"></div>/basic<div style=\"display: none;\"></div>auth.w<div
+        style=\"display: none;\"></div>ebscan<div style=\"display: none;\"></div>test.c<div
+        style=\"display: none;\"></div>om, http:/<div style=\"display: none;\"></div>/duala<div
+        style=\"display: none;\"></div>uth.we<div style=\"display: none;\"></div>bscant<div
+        style=\"display: none;\"></div>est.co<div style=\"display: none;\"></div>m).
+        <br/>\n<img border=\"0\" src=\"http://www.mightyseek.com/images/spacer.gif\"
+        />\n<div style=\"display:none;\"><a href=\"images/bouncingmike.jpg?a=b\">A
+        big picture</a></div>\n<!-- Example comment -->\n<!-- code comment\n\t<b>Here
+        is some HTML commented</b>\n-->\n<!-- Broken code comment\n\t<b Not vaild
+        HTML\n-->\n\n\t\t\t\t\t\t<tr style=\"height:20%; vertical-align:top\">\n\t\t\t\t\t\t\t<td
+        align=\"center\"><font color=\"grey\" size=\"-2\">The form based credentials
+        are testuser/testpass, and the HTTP Basic credentials are btestuser/btestpass.</font>\n\t\t\t\t\t\t</tr>\n\t\t\t\t\t\t\n\t\t\t\t\t\t<tr
+        style=\"height:10%; vertical-align:top\">\n\t\t\t\t\t\t\t<td align=\"center\"><a
+        href=\"/privacy.php\"><font color=\"#FFFFFF\">Privacy Policy</font></a></td>\n\t\t\t\t\t\t</tr>\n\n\t\t\t\t\t</table>\n\t\t\t\t</td>\n\t\t\t</tr>\n\t\t</table>\n\t</body>\n</html>"
+    http_version: 
+  recorded_at: Sun, 02 Sep 2018 09:12:35 GMT
 recorded_with: VCR 4.0.0
