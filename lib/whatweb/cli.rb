@@ -3,17 +3,21 @@
 require "json"
 require "thor"
 
+require "thread/pool"
+
 module WhatWeb
   class CLI < Thor
     desc "scan URL", "Scan against a given URL"
-    method_options aggressive: :boolean, default: false
-    method_options user_agent: :string
+    method_option :aggressive, type: :boolean, default: false
+    method_option :user_agent, type: :string
+    method_option :max_threads, type: :numeric, default: 10
     def scan(url)
       user_agent = options[:user_agent]
       is_aggressive = options[:aggressive]
+      max_threads = options[:max_threads]
 
       with_error_handling do
-        hash = execute_plugins(url, user_agent: user_agent, is_aggressive: is_aggressive)
+        hash = WhatWeb.execute_plugins(url, user_agent: user_agent, is_aggressive: is_aggressive, max_threads: max_threads)
         puts hash.to_json
       end
     end
@@ -21,39 +25,11 @@ module WhatWeb
     desc "list_plugins", "List all plugins"
     def list_plugins
       with_error_handling do
-        puts plugin_names.to_json
+        puts WhatWeb.plugin_names.to_json
       end
     end
 
     no_commands do
-      def execute_plugins(url, options = {})
-        user_agent = options[:user_agent]
-        is_aggressive = options[:is_aggressive]
-
-        plugins = PluginManager.instance.load_plugins
-        target = Target.new(url, user_agent: user_agent)
-
-        results = {}
-        plugins.each do |name, plugin|
-          result = plugin.execute(target, is_aggressive)
-          results[name] = result unless result.empty?
-        end
-        results
-      end
-
-      def plugin_names
-        plugins = PluginManager.instance.load_plugins
-        plugins.map do |name, plugin|
-          {
-            name: name,
-            author: plugin.author.encode("UTF-8"),
-            description: plugin.description.encode("UTF-8"),
-            website: plugin.website,
-            version: plugin.version
-          }
-        end
-      end
-
       def with_error_handling
         yield
       rescue StandardError => e

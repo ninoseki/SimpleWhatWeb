@@ -2,34 +2,21 @@
 
 require "json"
 
-vcr_options = { cassette_name: "cli", record: :new_episodes }
-RSpec.describe WhatWeb::CLI, vcr: vcr_options do
+RSpec.describe WhatWeb::CLI do
   subject { WhatWeb::CLI }
   context "without the aggressive mode" do
-    describe "#execute_plugins" do
-      it "should return a Hash" do
-        results = subject.new.execute_plugins "https://www.webscantest.com"
-        expect(results).to be_a(Hash)
-      end
-    end
     describe "#scan" do
+      before { allow(WhatWeb).to receive(:execute_plugins).and_return({}) }
       it "should output a JSON" do
         output = capture(:stdout) { subject.start %w(scan https://www.webscantest.com) }
         json = JSON.parse(output)
         expect(json).to be_a(Hash)
-        expect(json.dig("Title").first.dig("string")).to eq("Test Site")
       end
     end
   end
   context "with the aggressive mode" do
-    describe "#execute_plugins" do
-      it "should return a Hash" do
-        allow_any_instance_of(WhatWeb::Plugin).to receive(:randstr).and_return("fqeewoohxevinxslnplhjbymmeplmkwl")
-        results = subject.new.execute_plugins("https://www.webscantest.com", is_aggressive: true)
-        expect(results).to be_a(Hash)
-      end
-    end
     describe "#scan" do
+      before { allow(WhatWeb).to receive(:execute_plugins).and_return({}) }
       it "should output a JSON" do
         allow_any_instance_of(WhatWeb::Plugin).to receive(:randstr).and_return("fqeewoohxevinxslnplhjbymmeplmkwl")
         output = capture(:stdout) { subject.start %w(scan https://www.webscantest.com --aggressive) }
@@ -38,9 +25,9 @@ RSpec.describe WhatWeb::CLI, vcr: vcr_options do
       end
     end
   end
-
   context "with a custom user_agent" do
     describe "#scan" do
+      before { allow(WhatWeb).to receive(:execute_plugins).and_return({}) }
       it "should not raise any error" do
         ## I don't know how to test HTTP request header value...
         expect {
@@ -49,7 +36,6 @@ RSpec.describe WhatWeb::CLI, vcr: vcr_options do
       end
     end
   end
-
   describe "#list_plugins" do
     it "should output an Array " do
       output = capture(:stdout) { subject.start %w(list_plugins) }
