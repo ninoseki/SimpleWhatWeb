@@ -20,7 +20,7 @@ RSpec.describe WhatWeb::Plugin, vcr: vcr_options do
       ]
     end
   end
-  describe "#self.define" do
+  describe ".define" do
     it "should load variables via a given block" do
       expect(@plugin.author).to eq("Caleb Anderson")
       expect(@plugin.version).to eq("0.3")
