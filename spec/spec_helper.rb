@@ -12,6 +12,8 @@ require "webmock"
 
 require_relative "./support/helpers/helpers"
 
+NUMBER_OF_PLUGINS = 1751
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"

@@ -9,7 +9,7 @@ RSpec.describe WhatWeb::PluginManager, vcr: vcr_options do
 
   describe "#load_plugins" do
     it "should load all plugins" do
-      expect(subject.registered_plugins.keys.length).to eq(1750)
+      expect(subject.registered_plugins.keys.length).to eq(NUMBER_OF_PLUGINS)
     end
     describe "#passive" do
       it "should not raise any error" do

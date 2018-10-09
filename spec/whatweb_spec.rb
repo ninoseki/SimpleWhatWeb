@@ -26,7 +26,7 @@ RSpec.describe WhatWeb, vcr: vcr_options do
     it "should return an Array " do
       array = subject.plugin_names
       expect(array).to be_an(Array)
-      expect(array.length).to eq(1750)
+      expect(array.length).to eq(NUMBER_OF_PLUGINS)
     end
   end
 end
