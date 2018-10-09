@@ -11,6 +11,7 @@ require "vcr"
 require "webmock"
 
 require_relative "./support/helpers/helpers"
+require_relative "./support/shared_contexts/http_server_context"
 
 NUMBER_OF_PLUGINS = 1751
 
@@ -32,4 +33,5 @@ VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.configure_rspec_metadata!
   config.hook_into :webmock
+  config.ignore_localhost = true
 end

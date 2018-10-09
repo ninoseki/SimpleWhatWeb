@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
-vcr_options = { cassette_name: "plugin_manager", record: :new_episodes }
-RSpec.describe WhatWeb::PluginManager, vcr: vcr_options do
-  let(:target) { WhatWeb::Target.new "https://www.webscantest.com/" }
+RSpec.describe WhatWeb::PluginManager do
+  include_context "http_server"
+
+  let(:url) { "http://#{host}:#{port}" }
+  let(:target) { WhatWeb::Target.new url }
+
   subject { WhatWeb::PluginManager.instance }
 
   before(:each) { subject.load_plugins }
