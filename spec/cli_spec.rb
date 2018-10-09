@@ -41,7 +41,7 @@ RSpec.describe WhatWeb::CLI do
       output = capture(:stdout) { subject.start %w(list_plugins) }
       json = JSON.parse(output)
       expect(json).to be_an(Array)
-      expect(json.length).to eq(1750)
+      expect(json.length).to eq(NUMBER_OF_PLUGINS)
     end
   end
 end
